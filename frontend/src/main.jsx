@@ -6,7 +6,7 @@ import "./styles/index.scss";
 
 import App from "./App";
 import Home from "./pages/Home";
-import Admin from "./pages/Admin";
+import Admin, { loaderAdmin } from "./pages/Admin";
 import Connection from "./pages/Connection";
 
 const router = createBrowserRouter([
@@ -21,6 +21,7 @@ const router = createBrowserRouter([
       {
         path: "/admin",
         element: <Admin />,
+        loader: loaderAdmin,
       },
       {
         path: "/connection",

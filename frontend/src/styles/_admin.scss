@@ -1,0 +1,110 @@
+.admin-container {
+  margin-bottom: 10vh;
+  nav {
+    background-color: #fcebe8;
+    padding: 1%;
+
+    .image-container {
+      height: 5vh;
+
+      img {
+        height: 100%;
+      }
+    }
+  }
+
+  h1 {
+    font-family: "Inter", sans-serif;
+  }
+
+  .title-button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10vw;
+    padding: 8vh 8vw;
+  }
+
+  .button-add {
+    font-size: 1.1rem;
+    border-style: none;
+    padding: 9px 10px;
+    border-radius: 10px;
+    border: 0.5px solid grey;
+  }
+
+  .button-add:hover {
+    cursor: pointer;
+    color: grey;
+  }
+
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vw;
+    margin: 0 20vw;
+  }
+
+  .card-container {
+    padding: 20px;
+    font-family: "Inter", sans-serif;
+    background-color: beige;
+    // background-color: #FCEBE8;
+    height: 480px;
+    width: 18vw;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    /*.menu-background{
+        height: 100px;
+        z-index: 2;
+        position: absolute;
+        background-color: beige;
+        margin-top: 50px;
+    }*/
+
+    .donburi-image-container {
+      display: flex;
+      justify-content: center;
+      height: 200px;
+      img {
+        height: 100%;
+      }
+    }
+
+    .text-container {
+      padding: 0 20px 0 20px;
+    }
+
+    .menu-title-price-container {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding-bottom: 10px;
+    }
+
+    .menu-description {
+      min-height: 120px;
+    }
+
+    .button-container {
+      padding-top: 10px;
+      display: flex;
+      justify-content: space-around;
+
+      button {
+        font-size: 1.1rem;
+        border-style: none;
+        padding: 9px 10px;
+        border-radius: 10px;
+        border: 0.5px solid grey;
+      }
+      button:hover {
+        cursor: pointer;
+        color: grey;
+      }
+    }
+  }
+}
