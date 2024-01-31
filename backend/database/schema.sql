@@ -1,4 +1,9 @@
-create table item (
-  id int unsigned primary key auto_increment not null,
-  title varchar(255) not null
+DROP TABLE IF EXISTS `user`;
+
+CREATE TABLE `user` (
+    `id` INT PRIMARY KEY AUTO_INCREMENT, `name` VARCHAR(255) NOT NULL, `password` VARCHAR(150) NOT NULL, `is_administrator` BOOLEAN
+);
+
+CREATE TABLE `menu` (
+  `id` INT PRIMARY KEY AUTO_INCREMENT, `name` VARCHAR(255) NOT NULL, `image` VARCHAR(150) NOT NULL, `price` INT NOT NULL, `description` VARCHAR(150) NOT NULL
 );
