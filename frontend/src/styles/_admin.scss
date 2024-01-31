@@ -1,17 +1,5 @@
 .admin-container {
   margin-bottom: 10vh;
-  nav {
-    background-color: #fcebe8;
-    padding: 1%;
-
-    .image-container {
-      height: 5vh;
-
-      img {
-        height: 100%;
-      }
-    }
-  }
 
   h1 {
     font-family: "Inter", sans-serif;
@@ -25,16 +13,21 @@
   }
 
   .button-add {
+    text-align: center;
+    width: 10vw;
     font-size: 1.1rem;
     border-style: none;
-    padding: 9px 10px;
+    padding: 1.6vh 0.8vw;
     border-radius: 10px;
-    border: 0.5px solid grey;
+    background-color: #b51f38;
+    color: #f1f1f1;
+    text-decoration: none;
+    // border: 0.5px solid red;
   }
 
   .button-add:hover {
     cursor: pointer;
-    color: grey;
+    background-color: #cc8c97;
   }
 
   .cards-container {
@@ -97,7 +90,7 @@
       button {
         font-size: 1.1rem;
         border-style: none;
-        padding: 9px 10px;
+        padding: 9px 8px;
         border-radius: 10px;
         border: 0.5px solid grey;
       }

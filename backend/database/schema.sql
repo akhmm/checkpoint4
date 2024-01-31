@@ -5,7 +5,7 @@ CREATE TABLE `user` (
 );
 
 CREATE TABLE `menu` (
-  `id` INT PRIMARY KEY AUTO_INCREMENT, `name` VARCHAR(255) NOT NULL, `image` VARCHAR(150) NOT NULL, `price` INT NOT NULL, `description` VARCHAR(250) NOT NULL
+  `id` INT PRIMARY KEY AUTO_INCREMENT, `name` VARCHAR(255) NOT NULL, `image` VARCHAR(150), `price` INT NOT NULL, `description` VARCHAR(250) NOT NULL
 );
 
 INSERT INTO menu (name, image, price, description)

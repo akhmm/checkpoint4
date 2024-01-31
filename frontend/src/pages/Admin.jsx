@@ -1,4 +1,4 @@
-import { useLoaderData, useRevalidator } from "react-router-dom";
+import { useLoaderData, useRevalidator, Link } from "react-router-dom";
 import axios from "axios";
 import Navbar from "../components/Navbar";
 
@@ -19,21 +19,26 @@ function Admin() {
       <div className="body-container">
         <div className="title-button-container">
           <h1>NOS CARTES DU MIDI</h1>
-          <button className="button-add" type="button">
-            Add menu
-          </button>
+          <Link to="/add-menu" className="button-add">
+            <p>Ajouter menu</p>
+          </Link>
         </div>
         <div className="cards-container">
           {menus.map((menu) => {
             return (
-              <div className="card-container">
+              <div className="card-container" key={menu.id}>
                 <div className="donburi-image-container">
-                  <img src={menu.image} alt="donburi" />
+                  <img
+                    src={
+                      menu.image === null ? "/images/donburi.png" : menu.image
+                    }
+                    alt="donburi"
+                  />
                 </div>
                 <div className="text-container">
                   <div className="menu-title-price-container">
                     <p className="menu-title">{menu.name}</p>
-                    <p className="menu-price">12€</p>
+                    <p className="menu-price">{menu.price}€</p>
                   </div>
                   <p className="menu-description">{menu.description}</p>
                   <div className="button-container">
