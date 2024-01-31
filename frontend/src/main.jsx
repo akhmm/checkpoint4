@@ -8,6 +8,7 @@ import App from "./App";
 import Home from "./pages/Home";
 import Admin, { loaderAdmin } from "./pages/Admin";
 import Connection from "./pages/Connection";
+import AddMenu from "./pages/AddMenu";
 
 const router = createBrowserRouter([
   {
@@ -19,13 +20,17 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
+        path: "/connection",
+        element: <Connection />,
+      },
+      {
         path: "/admin",
         element: <Admin />,
         loader: loaderAdmin,
       },
       {
-        path: "/connection",
-        element: <Connection />,
+        path: "/add-menu",
+        element: <AddMenu />,
       },
     ],
   },

@@ -1,5 +1,6 @@
 import { useLoaderData, useRevalidator } from "react-router-dom";
 import axios from "axios";
+import Navbar from "../components/Navbar";
 
 function Admin() {
   const revalidator = useRevalidator();
@@ -14,11 +15,7 @@ function Admin() {
   const menus = useLoaderData();
   return (
     <div className="admin-container">
-      <nav>
-        <div className="image-container">
-          <img src="images/logo.png" alt="ichizen_logo" />
-        </div>
-      </nav>
+      <Navbar />
       <div className="body-container">
         <div className="title-button-container">
           <h1>NOS CARTES DU MIDI</h1>
