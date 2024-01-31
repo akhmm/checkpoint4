@@ -8,6 +8,7 @@ const menuControllers = require("./controllers/menuControllers");
 const itemControllers = require("./controllers/itemControllers");
 
 router.get("/menus", menuControllers.browse);
+router.get("/menus/:id", menuControllers.read);
 router.put("/menus/:id", menuControllers.edit);
 router.post("/menus", menuControllers.add);
 router.delete("/menus/:id", menuControllers.destroy);

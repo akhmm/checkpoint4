@@ -9,6 +9,20 @@ const browse = async (req, res, next) => {
   }
 };
 
+const read = async (req, res, next) => {
+  try {
+    const menu = await tables.menu.read(req.params.id);
+    if (menu == null) {
+      res.sendStatus(404);
+    } else {
+      res.json(menu);
+    }
+  } catch (err) {
+    // Pass any errors to the error-handling middleware
+    next(err);
+  }
+};
+
 const edit = async (req, res, next) => {
   const { name, image, price, description } = req.body;
 
@@ -51,6 +65,7 @@ const destroy = async (req, res, next) => {
 
 module.exports = {
   browse,
+  read,
   edit,
   add,
   destroy,

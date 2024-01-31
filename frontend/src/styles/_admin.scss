@@ -87,16 +87,22 @@
       display: flex;
       justify-content: space-around;
 
-      button {
+      .modify-delete-button {
         font-size: 1.1rem;
         border-style: none;
         padding: 9px 8px;
         border-radius: 10px;
         border: 0.5px solid grey;
       }
-      button:hover {
+      .modify-delete-button:hover {
         cursor: pointer;
         color: grey;
+      }
+
+      .modify-button {
+        text-decoration: none;
+        background-color: #f1f1f1;
+        color: black;
       }
     }
   }

@@ -1,9 +1,11 @@
-import { useState } from "react";
+// import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Navbar from "../components/Navbar";
 
-function addMenu() {
-  const [file, setFile] = useState("default");
+function AddMenu() {
+  // const [file, setFile] = useState("default");
+  const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
     axios
@@ -13,10 +15,10 @@ function addMenu() {
         description: e.target.description.value,
       })
       .catch((error) => console.error(error));
-  };
 
-  const handleUploadImage = (e) => {
-    setFile(URL.createObjectURL(e.target.files[0]));
+    // eslint-disable-next-line no-alert
+    alert("Menu is modified!!");
+    navigate("/admin");
   };
 
   return (
@@ -25,7 +27,7 @@ function addMenu() {
       <form onSubmit={handleSubmit}>
         <h1>Adding Menu</h1>
         <label htmlFor="name">Nom du menu</label>
-        <input className="input-name" type="text" name="name" />
+        <input className="input-name" type="text" name="name" required />
         <label htmlFor="price">Prix</label>
         <input
           type="number"
@@ -34,25 +36,10 @@ function addMenu() {
           id="price"
           min="5"
           max="100"
+          required
         />
-        <label htmlFor="image">Télécharger une image de couverture</label>
-        <div className="img-input-container">
-          <div className="image-container">
-            <img
-              src={file === "default" ? "/images/default-image-cp.png" : file}
-              alt="default"
-            />
-          </div>
-          <input
-            type="file"
-            className="input-file"
-            name="image"
-            accept="image/png, image/jpeg"
-            onChange={handleUploadImage}
-          />
-        </div>
         <label htmlFor="description">Description</label>
-        <textarea name="description" id="" cols="30" rows="10" />
+        <textarea name="description" id="" cols="30" rows="10" required />
         <div className="button-container">
           <button type="submit">Adding Menu</button>
         </div>
@@ -61,4 +48,4 @@ function addMenu() {
   );
 }
 
-export default addMenu;
+export default AddMenu;

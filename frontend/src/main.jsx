@@ -9,6 +9,7 @@ import Home from "./pages/Home";
 import Admin, { loaderAdmin } from "./pages/Admin";
 import Connection from "./pages/Connection";
 import AddMenu from "./pages/AddMenu";
+import EditMenu, { loaderEdit } from "./pages/EditMenu";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +32,11 @@ const router = createBrowserRouter([
       {
         path: "/add-menu",
         element: <AddMenu />,
+      },
+      {
+        path: "/edit-menu/:id",
+        element: <EditMenu />,
+        loader: loaderEdit,
       },
     ],
   },

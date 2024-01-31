@@ -42,8 +42,14 @@ function Admin() {
                   </div>
                   <p className="menu-description">{menu.description}</p>
                   <div className="button-container">
-                    <button type="button">Modify Menu</button>
+                    <Link
+                      to={`/edit-menu/${menu.id}`}
+                      className="modify-delete-button modify-button"
+                    >
+                      <p>Modify Menu</p>
+                    </Link>
                     <button
+                      className="modify-delete-button"
                       type="button"
                       onClick={() => handleDeleteMenu(menu.id)}
                     >
