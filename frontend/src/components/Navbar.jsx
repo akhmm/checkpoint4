@@ -1,7 +1,14 @@
 import { useLocation, Link } from "react-router-dom";
+import { useUser } from "../context/UserContext";
 
 function Navbar() {
+  const { userInfos, setUserInfos } = useUser();
   const location = useLocation();
+
+  const handleClick = () => {
+    setUserInfos(null);
+  };
+
   return (
     <nav>
       <div className="image-container">
@@ -11,13 +18,15 @@ function Navbar() {
       </div>
       {location.pathname !== "/" && (
         <div className="text-icon-container">
-          <p>Bonjour admin👋</p>{" "}
-          <Link to="/">
+          {userInfos && <p>Bonjour {userInfos.username}👋</p>}
+          <Link to="/" target="_blank">
             <img src="/images/website.png" alt="website_logo" />
           </Link>
-          <Link to="/connection">
-            <img src="/images/logout.png" alt="logout_logo" />
-          </Link>
+          {userInfos && (
+            <Link to="/connection" onClick={handleClick}>
+              <img src="/images/logout.png" alt="logout_logo" />
+            </Link>
+          )}
         </div>
       )}
     </nav>
