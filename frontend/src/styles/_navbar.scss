@@ -1,12 +1,28 @@
 nav {
   background-color: #fcebe8;
   padding: 1%;
+  padding-right: 2vw;
+  display: flex;
+  justify-content: space-between;
 
   .image-container {
     height: 5vh;
-
     img {
       height: 100%;
+    }
+  }
+
+  .text-icon-container {
+    display: flex;
+    gap: 1.3vw;
+    align-items: center;
+
+    img {
+      height: 30px;
+    }
+
+    img:hover {
+      cursor: pointer;
     }
   }
 }
