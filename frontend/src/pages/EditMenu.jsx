@@ -6,7 +6,6 @@ import Navbar from "../components/Navbar";
 function EditMenu() {
   const menu = useLoaderData();
   const navigate = useNavigate();
-  // const [file, setFile] = useState("default");
   const handleSubmit = async (e) => {
     e.preventDefault();
     axios
@@ -20,11 +19,6 @@ function EditMenu() {
     alert("Menu is modified!!");
     navigate("/admin");
   };
-  /*
-  const handleUploadImage = (e) => {
-    setFile(URL.createObjectURL(e.target.files[0]));
-  };
-  */
 
   return (
     <div className="editmenu-container">
