@@ -1,11 +1,12 @@
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { useUser } from "../context/UserContext";
 import Navbar from "../components/Navbar";
 
 function Connection() {
   // todo : importer le setter "setUserInfos" via Useconext
-  // const { setUserInfos } = useUser();
+  const { setUserInfos } = useUser();
   const navigate = useNavigate();
   const usernameRef = useRef();
   const passwordRef = useRef();
@@ -20,7 +21,7 @@ function Connection() {
         inputPassword: password,
       });
       if (res.status === 200) {
-        // setUserInfos(res.data);
+        setUserInfos(res.data);
         navigate("/admin");
       }
     } catch (e) {

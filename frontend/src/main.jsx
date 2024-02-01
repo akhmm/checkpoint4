@@ -10,6 +10,7 @@ import Admin, { loaderAdmin } from "./pages/Admin";
 import Connection from "./pages/Connection";
 import AddMenu from "./pages/AddMenu";
 import EditMenu, { loaderEdit } from "./pages/EditMenu";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 const router = createBrowserRouter([
   {
@@ -27,16 +28,28 @@ const router = createBrowserRouter([
       },
       {
         path: "/admin",
-        element: <Admin />,
+        element: (
+          <ProtectedRoute>
+            <Admin />
+          </ProtectedRoute>
+        ),
         loader: loaderAdmin,
       },
       {
         path: "/add-menu",
-        element: <AddMenu />,
+        element: (
+          <ProtectedRoute>
+            <AddMenu />
+          </ProtectedRoute>
+        ),
       },
       {
         path: "/edit-menu/:id",
-        element: <EditMenu />,
+        element: (
+          <ProtectedRoute>
+            <EditMenu />
+          </ProtectedRoute>
+        ),
         loader: loaderEdit,
       },
     ],

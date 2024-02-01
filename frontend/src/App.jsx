@@ -1,10 +1,13 @@
 import { Outlet } from "react-router-dom";
+import { UserProvider } from "./context/UserContext";
 
 function App() {
   return (
-    <div className="App">
-      <Outlet />
-    </div>
+    <UserProvider>
+      <div className="App">
+        <Outlet />
+      </div>
+    </UserProvider>
   );
 }
 
