@@ -12,7 +12,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 5vh 30vw;
+    margin: 5vh 22%;
     background-color: #f1f1f1;
     padding: 3vh 7vw 5vh 7vw;
 
@@ -78,6 +78,18 @@
     button:hover {
       cursor: pointer;
       background-color: #cc8c97;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .addmenu-container {
+    form {
+      margin: 2vh 0;
+      width: 100vw;
+      button {
+        width: 50%;
+      }
     }
   }
 }
