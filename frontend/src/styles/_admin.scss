@@ -1,0 +1,140 @@
+.admin-container {
+  margin-bottom: 10vh;
+
+  h1 {
+    font-family: "Inter", sans-serif;
+  }
+
+  .title-button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10vw;
+    padding: 8vh 8vw;
+  }
+
+  .button-add {
+    text-align: center;
+    width: 10vw;
+    font-size: 1.1rem;
+    border-style: none;
+    padding: 1.6vh 0.8vw;
+    border-radius: 10px;
+    background-color: #b51f38;
+    color: #f1f1f1;
+    text-decoration: none;
+    // border: 0.5px solid red;
+  }
+
+  .button-add:hover {
+    cursor: pointer;
+    background-color: #cc8c97;
+  }
+
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2vw;
+    margin: 0 10%;
+  }
+
+  .card-container {
+    padding: 20px;
+    font-family: "Inter", sans-serif;
+    background-color: beige;
+    // background-color: #FCEBE8;
+    height: 540px;
+    width: 30%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+
+    /*.menu-background{
+        height: 100px;
+        z-index: 2;
+        position: absolute;
+        background-color: beige;
+        margin-top: 50px;
+    }*/
+
+    .donburi-image-container {
+      display: flex;
+      justify-content: center;
+      height: 200px;
+      img {
+        height: 100%;
+      }
+    }
+
+    .text-container {
+      padding: 0 20px 0 20px;
+
+      .menu-title {
+        max-width: 95%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+    }
+
+    .menu-title-price-container {
+      display: flex;
+      justify-content: space-between;
+      font-size: 1.2rem;
+      font-weight: bold;
+      padding-bottom: 10px;
+    }
+
+    .menu-description {
+      min-height: 170px;
+      max-height: 180px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    .button-container {
+      padding-top: 10px;
+      display: flex;
+      justify-content: space-around;
+
+      .modify-delete-button {
+        font-size: 1.1rem;
+        border-style: none;
+        padding: 9px 8px;
+        border-radius: 10px;
+        border: 0.5px solid grey;
+      }
+      .modify-delete-button:hover {
+        cursor: pointer;
+        color: grey;
+      }
+
+      .modify-button {
+        text-decoration: none;
+        background-color: #f1f1f1;
+        color: black;
+      }
+    }
+  }
+}
+
+@media (max-width: 1100px) {
+  .admin-container {
+    .cards-container {
+      display: flex;
+      justify-content: center;
+    }
+    .card-container {
+      width: 40%;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .admin-container {
+    .card-container {
+      padding: 3vh 14vw;
+      width: 100%;
+    }
+  }
+}

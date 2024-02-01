@@ -5,9 +5,11 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./styles/index.scss";
 
 import App from "./App";
-import Home from "./pages/Home";
-import Admin from "./pages/Admin";
+import Home, { loaderHome } from "./pages/Home";
+import Admin, { loaderAdmin } from "./pages/Admin";
 import Connection from "./pages/Connection";
+import AddMenu from "./pages/AddMenu";
+import EditMenu, { loaderEdit } from "./pages/EditMenu";
 
 const router = createBrowserRouter([
   {
@@ -17,14 +19,25 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
-      },
-      {
-        path: "/admin",
-        element: <Admin />,
+        loader: loaderHome,
       },
       {
         path: "/connection",
         element: <Connection />,
+      },
+      {
+        path: "/admin",
+        element: <Admin />,
+        loader: loaderAdmin,
+      },
+      {
+        path: "/add-menu",
+        element: <AddMenu />,
+      },
+      {
+        path: "/edit-menu/:id",
+        element: <EditMenu />,
+        loader: loaderEdit,
       },
     ],
   },
