@@ -1,0 +1,83 @@
+.connection-container {
+  font-family: "Inter", sans-serif;
+  margin-bottom: 5vh;
+
+  // background-color: red;
+  h1 {
+    text-align: center;
+    padding: 5vh;
+  }
+  form {
+    // padding: 5vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 7vh 30%;
+    background-color: #f1f1f1;
+    padding: 3vh 7vw 5vh 7vw;
+
+    label {
+      padding: 1% 0;
+      font-size: 1rem;
+    }
+
+    input {
+      border-style: none;
+      height: 4vh;
+      border-radius: 10px;
+      margin-bottom: 2vh;
+    }
+
+    .input-name {
+      width: 100%;
+    }
+
+    .input-password {
+      width: 100%;
+    }
+
+    .input-file {
+      padding: 3vh;
+    }
+
+    textarea {
+      width: 100%;
+      border-style: none;
+      resize: none;
+      border-radius: 10px;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    button {
+      margin-top: 2vh;
+      width: 40%;
+      font-size: 1.1rem;
+      border-style: none;
+      padding: 1.6vh 0.8vw;
+      border-radius: 10px;
+      background-color: #b51f38;
+      color: #f1f1f1;
+      // border: 0.5px solid red;
+    }
+    button:hover {
+      cursor: pointer;
+      background-color: #cc8c97;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .connection-container {
+    form {
+      margin: 2vh 0;
+      width: 100vw;
+      button {
+        width: 50%;
+      }
+    }
+  }
+}
