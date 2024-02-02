@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, Link } from "react-router-dom";
 import axios from "axios";
 
 function Home() {
@@ -12,25 +12,26 @@ function Home() {
       </nav>
       <div className="image-text-container">
         <div className="home-image-container">
-          <img src="/images/home.png" alt="ichizen-bar" />
+          <img src="/images/home2.png" alt="ichizen-bar" />
         </div>
-        <p>ICHIZEN Brassérie japonais</p>
+        {/* <p>ICHIZEN Brassérie japonais</p> */}
       </div>
-      <div className="menu-midi">
-        <h1>NOTRE CARTE DU MIDI</h1>
-        <p>
-          Nous vous proposons les donburi japonais.Le Lorem Ipsum est simplement
-          du faux texte employé dans la composition et la mise en page avant
-          impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie
-          depuis les années 1500{" "}
-        </p>
-        <div>
-          <button type="button" className="button-see-menu">
-            Voir la carte
-          </button>
+      <div className="contents-container">
+        <div className="menu-midi">
+          <h1>NOTRE CARTE DU MIDI</h1>
+          <p>
+            Nous vous proposons les donburi japonais.Le Lorem Ipsum est
+            simplement du faux texte employé dans la composition et la mise en
+            page avant impression. Le Lorem Ipsum est le faux texte standard de
+            l'imprimerie depuis les années 1500{" "}
+          </p>
+          <div>
+            <button type="button" className="button-see-menu">
+              Voir la carte
+            </button>
+          </div>
         </div>
-      </div>
-      <div className="content-container">
+
         <div className="cards-container">
           {menus.map((menu) => {
             return (
@@ -54,37 +55,45 @@ function Home() {
             );
           })}
         </div>
-      </div>
-      <div className="menu-soir-container">
-        <div className="menu-soir-image-container">
-          <img src="/images/menu-soir.png" alt="dinner-menu" />
-        </div>
-        <div className="menu-soir-right-container">
-          <h3>NOS CARTE DE SOIR</h3>
-          <p>
-            Nous vous proposons les donburi japonais.Le Lorem Ipsum est
-            simplement du faux texte employé dans la composition et la mise en
-            page avant impression. Le Lorem Ipsum est le faux texte standard de
-            l'imprimerie depuis les années 1500 Nous vous proposons les donburi
-            japonais.Le Lorem Ipsum est simplement du faux texte employé dans la
-            composition et la mise en page avant impression. Le Lorem Ipsum est
-            le faux texte standard de l'imprimerie depuis les années 1500{" "}
-          </p>
-          <div>
-            <button type="button" className="button-see-menu">
-              Voir la carte
-            </button>
+
+        <div className="menu-soir-container">
+          <div className="menu-soir-image-container">
+            <img src="/images/menu-soir.png" alt="dinner-menu" />
+          </div>
+          <div className="menu-soir-text-container">
+            <h3>NOS CARTE DE SOIR</h3>
+            <p>
+              Nous vous proposons les donburi japonais.Le Lorem Ipsum est
+              simplement du faux texte employé dans la composition et la mise en
+              page avant impression. Le Lorem Ipsum est le faux texte standard
+              de l'imprimerie depuis les années 1500 Nous vous proposons les
+              donburi japonais.Le Lorem Ipsum est simplement du faux texte
+              employé dans la composition et la mise en page avant impression.
+              Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis
+              les années 1500{" "}
+            </p>
+            <div>
+              <button type="button" className="button-see-menu">
+                Voir la carte
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="delivery-container">
-        <div className="delivery-image-container">
-          <img src="images/delivery.png" alt="delivery" />
+        <div className="delivery-container">
+          <div className="delivery-image-container">
+            <img src="images/delivery.png" alt="delivery" />
+          </div>
+          <div className="delivery-texts">
+            <p>Commande avec click and collect et livraison</p>
+            <Link
+              to="https://commandes-ichizen.com/order/"
+              target="_blank"
+              className="button-declicity"
+            >
+              Voir la carte
+            </Link>
+          </div>
         </div>
-        <p>Commande avec click and collect et livraison</p>
-        <button type="button" className="button-see-menu">
-          Voir la carte
-        </button>
       </div>
     </div>
   );
